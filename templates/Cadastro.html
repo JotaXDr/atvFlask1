@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="card">
+      <div class="page-header">
+          <h1>{{ Titulo }}</h1>
+      </div>
+      <form action='/criar' method="post">
+        <fieldset>
+          <div class="form-group">
+            <label for=numero>Nome</label>
+            <input type="text" id="numero" name="numero" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="nome">cpf</label>
+            <input type="number" id="nome" name="nome" class="form-control" required>
+          </div>
+          <div class="form-group">
+           <label for="tipo">Jogo</label>
+            <select id="tipo" name="tipo" required multiple>
+              <option value="" selected>Selecione um Game</option>
+              <option value="Valorant">Valorant</option>
+              <option value="League Of Legends">League Of Legends</option>
+              <option value="Clash Royale">Clash Royale</option>
+              <option value="CS-GO">CS-GO</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="altura">Posição/ Função</label>
+            <input type="text" id="altura" name="altura" class="form-control" required>
+          </div>
+           <div class="form-group">
+            <label for="peso">Rank</label>
+            <input type="text" id="peso" name="peso" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+        </fieldset>
+      </form>
+    </div>
+</body>
+</html>
